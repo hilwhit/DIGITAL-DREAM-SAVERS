@@ -125,9 +125,9 @@ onAuthStateChanged(auth, async (user) => {
         '/deposit.html',
         '/withdraw.html',
         '/domesticequities.html',
-        'fixedincome.html',
-        'moneymarkets.html',
-        'realestate.html',
+        '/fixedincome.html',
+        '/moneymarkets.html',
+        '/realestate.html',
 
     ];
     const currentUrl = window.location.pathname;
