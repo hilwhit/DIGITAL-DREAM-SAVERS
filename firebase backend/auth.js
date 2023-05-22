@@ -131,8 +131,16 @@ onAuthStateChanged(auth, async (user) => {
         window.location = '/dashboard.html';
     } else {
       // Update profile information
-      const profileImg = document.querySelector('.col-md-3 img');
-      const profileName = document.querySelector('.col-md-9 h3');
+        const userNameElement = document.getElementById('userName');
+        const profileImageElement = document.getElementById('profileImage');
+        const profileNameElement = document.getElementById('profileName');
+        const fullNameElement = document.getElementById('fullName');
+        const countryCodeElement = document.getElementById('countryCode');
+        const phoneNumberElement = document.getElementById('phoneNumber');
+        const emailElement = document.getElementById('email');
+        const fullNameInputElement = document.getElementById('fullNameInput');
+        const phoneInputElement = document.getElementById('phoneInput');
+        const emailInputElement = document.getElementById('emailInput');
 
       // Get user information from Firebase Auth
       // const db = getFirestore();
@@ -142,24 +150,21 @@ onAuthStateChanged(auth, async (user) => {
           if (doc.exists()) {
             const userData = doc.data();
             // Update profile image and name
-            profileImg.src = userData.photoURL || '/img/avatar.png';
-            profileName.textContent = userData.name || 'Anonymous';
+                userNameElement.textContent = userData.name;
+                profileImageElement.src = userData.photoURL || 'profile.png';
+                profileNameElement.textContent = userData.name || 'Anonymous';
+                fullNameElement.textContent = userData.name || 'Anonymous';
+                fullNameInputElement.value = userData.name || 'Anonymous';
+                countryCodeElement.textContent = userData.countryCode || 'No Country Code';
+                phoneNumberElement.textContent = userData.phoneNumber || 'No Phone Number';
+                phoneInputElement.value = (userData.countryCode || 'No Country Code') + ' ' + (userData.phoneNumber || 'No Phone Number');
+                emailElement.textContent = userData.email || 'No Email';
+                emailInputElement.value = userData.email || 'No Email';
           }
         })
         .catch((error) => {
           console.log('Error getting user document:', error);
         });
-
-        // Get the number of cases reported by the user
-        const reportsRef = collection(db, 'Reports');
-        const filteredReports = query(reportsRef, where('uploadedby', '==', user.email)); // or getDocs(query(reportsRef))
-        const querySnapshot = await getDocs(filteredReports);
-        try {
-                document.getElementById('numCases').textContent = querySnapshot.size;
-            } catch (error) {
-                console.log('Error getting reports:', error);
-            }
-
     }
     } else {
 

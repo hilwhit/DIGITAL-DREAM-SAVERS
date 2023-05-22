@@ -71,15 +71,27 @@
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto"> 
-      <li class="nav-item">
-        <a class="nav-link" href="dashboard.html">Savings</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarSavingsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Savings
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarSavingsDropdown">
+          <a class="dropdown-item" href="#">Deposit</a>
+          <a class="dropdown-item" href="#">Withdraw</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="investments.html">Investments</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarInvestmentsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Investments
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarInvestmentsDropdown">
+          <a class="dropdown-item" href="#">Deposit</a>
+          <a class="dropdown-item" href="#">Withdraw</a>
+        </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Hello Hildah
+          Hello <span id="userName"></span>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="profile.html">Profile</a>

@@ -33,6 +33,14 @@
   border-radius: 10px;
 }
 
+.dropdown-menu-side {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  margin-top: -1px;
+  margin-right: 10px;
+}
+
  </style>
 
 </head>
@@ -48,20 +56,69 @@
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto"> 
-      <li class="nav-item">
-        <a class="nav-link active" href="dashboard.html">Savings</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="investments.html">Investments</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarSavingsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Savings
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarSavingsDropdown">
+          <a class="dropdown-item" href="#">Deposit</a>
+          <a class="dropdown-item" href="#">Withdraw</a>
+        </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Hello Hildah
+        <a class="nav-link dropdown-toggle"  id="navbarInvestmentsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Investments
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu" aria-labelledby="navbarInvestmentsDropdown">
+          <div class="dropdown">
+            <a class="dropdown-item dropdown-toggle" href="#" id="navbarMoneyMarketsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Money Markets
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarMoneyMarketsDropdown">
+              <a class="dropdown-item" href="#">Treasury Bills</a>
+              <a class="dropdown-item" href="#">Certificate Of Deposits</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-item dropdown-toggle"  id="navbarFixedIncomeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Fixed Income
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarFixedIncomeDropdown">
+              <a class="dropdown-item" href="#">Treasury Bonds</a>
+              <a class="dropdown-item" href="#">Corporate Bonds</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-item dropdown-toggle"  id="navbarDomesticEquitiesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Domestic Equities
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDomesticEquitiesDropdown">
+              <a class="dropdown-item" href="#">Buy Shares</a>
+              <a class="dropdown-item" href="#">Buy Stocks</a>
+              <a class="dropdown-item" href="#">Trading</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-item dropdown-toggle" href="#" id="navbarRealEstateDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Real Estate
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarRealEstateDropdown">
+              <a class="dropdown-item" href="#">Land</a>
+              <a class="dropdown-item" href="#">Residential</a>
+              <a class="dropdown-item" href="#">Commercial</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarUserDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Hello <span id="userName"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarUserDropdown">
           <a class="dropdown-item" href="profile.html">Profile</a>
           <a class="dropdown-item" id="logout">Log Out</a>
-         
         </div>
       </li>
     </ul>
@@ -206,6 +263,7 @@
     <!-- Copyright -->
   
   </footer>
+  
   <script type="module" src="/firebase backend/auth.js"></script>
 
   <script>
@@ -222,6 +280,7 @@
     // Call the function initially
     updateProgressBar();
   </script>
+  
 
   </body>
   </html>
