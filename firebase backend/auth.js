@@ -122,6 +122,12 @@ onAuthStateChanged(auth, async (user) => {
         '/dashboard.html',
         '/investments.html',
         '/profile.html',
+        '/deposit.html',
+        '/withdraw.html',
+        '/domesticequities.html',
+        'fixedincome.html',
+        'moneymarkets.html',
+        'realestate.html',
 
     ];
     const currentUrl = window.location.pathname;
