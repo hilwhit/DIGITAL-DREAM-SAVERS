@@ -14,7 +14,49 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
- <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <style>
+        .graph-container {
+        width: 400px;
+        margin: 20px auto;
+        text-align: center;
+        }
+
+        .bar-graph {
+        display: flex;
+        align-items: flex-end;
+        height: 200px;
+        background-color: #f1f1f1;
+        border-radius: 8px;
+        overflow: hidden;
+        }
+
+        .bar {
+        flex: 1;
+        margin: 0 5px;
+        transition: height 0.3s ease-in-out;
+        }
+
+        .invested {
+        background-color: #6122ff;
+        }
+
+        .revenue {
+        background-color: #4CAF50;
+        }
+
+        .graph-labels {
+        margin-top: 10px;
+        }
+
+        .graph-labels span {
+        display: inline-block;
+        margin: 0 20px;
+        font-weight: bold;
+        color: #777;
+        }
+    </style>
 
 </head>
 <body>
@@ -84,7 +126,17 @@
         </div>
       </div>
       <div class="col-md-12 text-center mt-3">
-        <h3>Track Investments</h3>
+        <div class="graph-container">
+            <h3>Track Investments</h3>
+            <div class="bar-graph">
+              <div class="bar invested"></div>
+              <div class="bar revenue"></div>
+            </div>
+            <div class="graph-labels">
+              <span>Invested</span>
+              <span>Revenue</span>
+            </div>
+        </div>
       </div>
     </div>
 </div>
@@ -184,8 +236,29 @@
     </div>
     <!-- Copyright -->
   
-  </footer>
+</footer>
+
   <script type="module" src="/firebase backend/auth.js"></script>
+
+    <script>
+        // Example values for demonstration purposes
+        var investedAmount = 50000;
+        var revenueAmount = 500000;
+
+        function updateBarGraph() {
+        var totalAmount = investedAmount + revenueAmount;
+        var investedPercentage = (investedAmount / totalAmount) * 100;
+        var revenuePercentage = (revenueAmount / totalAmount) * 100;
+
+        document.querySelector('.invested').style.height = investedPercentage + '%';
+        document.querySelector('.revenue').style.height = revenuePercentage + '%';
+        }
+
+        // Call the function initially
+        updateBarGraph();
+
+    </script>
+
   </body>
   </html>
   
