@@ -4,14 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="data:,">
-    <script src="./js/bootstrap.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
  
@@ -52,32 +50,32 @@
     <div class="row">
         <div class="col-md-6 text-center mt-5 pt-5 offset-md-3 bg-default" >
             <h3 class="text-center text-dark">Create a Secure Profile</h3>
-            <form class="" action="#">
+            <!-- <form class="" action="#"> -->
                 <div class="form-group row">
                     <div class="col-md-6 mt-2 mb-2 p-2"> 
-                        <input class="form-control"name="Fname" placeholder="First Name" id="" type="text">
+                        <input class="form-control"name="Fname" placeholder="First Name" id="firstname" type="text">
                     </div>
                     <div class="col-md-6 mt-2 mb-2 p-2"> 
-                        <input class="form-control" name="Lname" placeholder="Last Name" id="" type="text">
+                        <input class="form-control" name="Lname" placeholder="Last Name" id="lastname" type="text">
                     </div>
                     <div class="col-md-12 mt-2 mb-2 p-2"> 
-                        <input class="form-control"name="email" placeholder="Email" id=""type="email">
+                        <input class="form-control" name="email" placeholder="Email" id="email" type="email">
                     </div>
                     <div class="col-md-12 mt-2 mb-2 p-2">
-                        <input  class="form-control"name="password" placeholder="Password" id="" type="password">
+                        <input  class="form-control"name="password" placeholder="Password" id="password" type="password">
                     </div>
                     <div class="col-md-3 mt-2 mb-2 p-2">
-                        <select class="form-control" name="country-code" id="sel">
-                            <option>UG(+256)</option>
-                            <option>Kenya(+254)</option>
+                        <select class="form-control" name="country-code" id="country-code">
+                            <option value="+256">UG(+256)</option>
+                            <option value="+254">Kenya(+254)</option>
                         </select>
                     </div>
                     <div class="col-md-9 mt-2 mb-2 p-2">
-                        <input class="form-control" name="phone-number" placeholder="Phone-Number" id="" type="text">
+                        <input class="form-control" name="phone-number" placeholder="Phone-Number" id="phone-number" type="text">
                     </div>
                </div>
-               <button type="submit" class="btn btn-sm btn-dark">Create Profile</button>         
-            </form>
+               <button type="submit" id="signup" class="btn btn-sm btn-dark" onclick="updateButtonText()">Create Profile</button>         
+            <!-- </form> -->
             <p class="mt-2 pt-2 text-dark">Have an account already!</p>
             <a href="login.html" class="link text-secondary">Login into your account</a>
             <p class="mt-2 pt-2">By creating a profile, you agree to the Tubayo Community Fund <em> Terms of Servive </em>& <em>Privacy Policy</em></p>
@@ -205,6 +203,22 @@
     <!-- Copyright -->
   
   </footer>
+
+  <script type="module" src="/firebase backend/auth.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+  <script>
+    function updateButtonText() {
+      var button = document.getElementById("signup");
+      button.innerText = "Creating...";
+      button.disabled = true; // Optional: Disable the button to prevent multiple clicks
+      // You can also include additional logic here to perform other actions, such as submitting a form or making an AJAX request.
+    }
+    </script>
   </body>
   </html>
   

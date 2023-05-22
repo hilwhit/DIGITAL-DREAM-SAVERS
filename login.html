@@ -56,22 +56,21 @@
             <div class="card">
                 <h5 class="text-center text-dark mt-2 pt-2">Already have an Account!</h5>
                 <div class="card-body">
-                    <form class="" action="#">
+                    <!-- <form class="" action="#"> -->
                         <div class="form-group row">
+                         
                             <div class="col-md-12 mt-2 mb-2 p-2"> 
-                                <input class="form-control"name="username" placeholder="userName" id="" type="text">
-                            </div>
-                            <div class="col-md-12 mt-2 mb-2 p-2"> 
-                                <input class="form-control"name="email" placeholder="Email" id=""type="email">
+                                <input class="form-control"name="email" placeholder="Email" id="email" type="email">
                             </div>
                             <div class="col-md-12 mt-2 mb-2 p-2">
-                                <input  class="form-control"name="password" placeholder="Password" id="" type="password">
+                                <input  class="form-control"name="password" placeholder="Password" id="password" type="password">
                             </div>
                             
                     </div>
-                    <button type="submit" class="btn btn-sm btn-dark">Login</button>
+                    <button type="submit" class="btn btn-sm btn-dark" id="login">Login</button>
+                    
                         
-                    </form>
+                    <!-- </form> -->
                     <p class="c text-secondary">Don't have an account with us yet!</p>
                     <a href="signup.html" class="link text-secondary">Create an account</a>
                 </div>
@@ -201,6 +200,7 @@
     <!-- Copyright -->
   
   </footer>
+  <script type="module" src="/firebase backend/auth.js"></script>
   </body>
   </html>
   

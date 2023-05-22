@@ -14,12 +14,12 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
- 
+ <link rel="stylesheet" href="/css/stylesheet.css">
 
 </head>
 <body>
 <!-- <div class="jumbotron jumbotron-fluid "> -->
-<nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-center fixed-top pb-2">
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-center pb-2 mb-5">
     <a class="navbar-brand" href="index.html">
         <img src="/images/logo.png" alt="Logo" style="width:50px;">
       </a>
@@ -27,40 +27,68 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse " id="collapsibleNavbar">
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Save/Invest</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="learn.html">Learn</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="aboutus.html">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact Us</a>
-      </li>   
-      <li class="nav-item ">
-        <a class="nav-link" href="login.html">Login</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Hello Hildah
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" id="logout">LOG OUT</a>
+         
+        </div>
       </li>
     </ul>
   </div>  
 </nav>
 
-
-
 <!--//body-section -->
 
 <div class="container">
     <div class="row">
-       <p class=""></p>
-    </div>
+      <div class="col-md-12 mb-3">
+        
+          <button type="button" class="btn btn-dark">
+            SAVE NOW
+          </button>
+        
+          <button type="button" class="btn btn-dark">
+            INVEST NOW
+          </button>
+        
+      </div>
+      <div class="col-md-6">
+        <div class="pack-container">
+          <div class="header">
+            <p class="title">
+              SAVINGS
+            </p>
+            <div class="price-container">
+              <span>UGX</span>5000
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pack-container">
+          <div class="header">
+            <p class="title">
+              INVESTMENTS
+            </p>
+            <div class="price-container">
+              <span>UGX</span>5000
+            </div>
+          </div>
+          
+        </div>
+      </div>
 
+    </div>
 </div>
   
 
-<footer class="page-footer font-small bg-dark pt-4">
+<footer class="page-footer font-small bg-dark pt-4 mt-5">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left text-light">
@@ -155,6 +183,7 @@
     <!-- Copyright -->
   
   </footer>
+  <script type="module" src="/firebase backend/auth.js"></script>
   </body>
   </html>
   
