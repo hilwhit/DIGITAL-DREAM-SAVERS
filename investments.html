@@ -16,23 +16,6 @@
 
  <link rel="stylesheet" href="/css/stylesheet.css">
 
- <style>
-    .progress-bar {
-      width: 100%;
-      height: 20px;
-      background-color: #f1f1f1;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .progress {
-      height: 100%;
-      background-color: #4CAF50;
-      width: 0;
-      transition: width 0.3s;
-    }
- </style>
-
 </head>
 <body>
 <!-- <div class="jumbotron jumbotron-fluid "> -->
@@ -47,10 +30,10 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto"> 
       <li class="nav-item">
-        <a class="nav-link active" href="dashboard.html">Savings</a>
+        <a class="nav-link" href="dashboard.html">Savings</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="investments.html">Investments</a>
+        <a class="nav-link active" href="investments.html">Investments</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -69,43 +52,41 @@
 <!--//body-section -->
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-12 mb-3">
-        <h1>Savings</h1>
-    </div>
-    <div class="col-md-6 text-center">
-      <div class="pack-container">
-        <div class="header">
-          <p class="title">
-            <h4>Your Current Savings</h4> 
-          </p>
-          <div class="price-container">
-            <h6> UGX 5000</h6>
+    <div class="row">
+      <div class="col-md-12 mb-3">
+         <h1>Investments</h1>
+      </div>
+      <div class="col-md-6 text-center">
+        <div class="pack-container">
+          <div class="header">
+            <p class="title">
+              <h4>Amount Invested</h4> 
+            </p>
+            <div class="price-container">
+                <h5> </h5>
+             <h6> UGX 5000</h6>
+            </div>
           </div>
+          
         </div>
-        
       </div>
-    </div>
-    <div class="col-md-6 text-center">
-      <div class="pack-container">
-        <div class="header">
-          <p class="title">
-            <h4>Your Target Savings</h4>
-          </p>
-          <div>
-            <h6>UGX 500000</h6>
+      <div class="col-md-6 text-center">
+        <div class="pack-container">
+          <div class="header">
+            <p class="title">
+              <h4>Returns On Investments</h4>
+            </p>
+            <div>
+              <h6>UGX 500000</h6>
+            </div>
           </div>
+          
         </div>
-        
+      </div>
+      <div class="col-md-12 text-center mt-3">
+        <h3>Track Investments</h3>
       </div>
     </div>
-    <div class="col-md-12 text-center mt-3">
-      <h3>Track Savings</h3>
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-    </div>
-  </div>
 </div>
   
 
@@ -205,22 +186,6 @@
   
   </footer>
   <script type="module" src="/firebase backend/auth.js"></script>
-
-  <script>
-    // Add these global variables
-    var currentAmount = 5000; // Example: Current saved amount
-    var targetAmount = 500000; // Example: Target savings goal
-
-    // Call this function to update the progress bar
-    function updateProgressBar() {
-      var progress = (currentAmount / targetAmount) * 100;
-      document.querySelector('.progress').style.width = progress + '%';
-    }
-
-    // Call the function initially
-    updateProgressBar();
-  </script>
-
   </body>
   </html>
   

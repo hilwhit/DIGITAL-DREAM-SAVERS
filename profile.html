@@ -1,0 +1,472 @@
+<!DOCTYPE HTML><html>
+<head>
+    <title>Tubaayo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        }
+
+        .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: background-color 0.3s;
+        }
+
+        .tab button:hover {
+        background-color: #ddd;
+        }
+
+        .tab button.active {
+        background-color: #ccc;
+        }
+
+        .tabcontent {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ccc;
+        }
+
+        .tabcontent.show {
+        display: block;
+        }
+    </style>
+
+</head>
+<body>
+<!-- <div class="jumbotron jumbotron-fluid "> -->
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-center pb-2 mb-5">
+    <a class="navbar-brand" href="index.html">
+        <img src="/images/logo.png" alt="Logo" style="width:50px;">
+      </a>
+  <a class="navbar-brand" href="index.html">Tubaayo Community Fund</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto"> 
+      <li class="nav-item">
+        <a class="nav-link" href="dashboard.html">Savings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="investments.html">Investments</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Hello Hildah
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item active" href="profile.html">Profile</a>
+          <a class="dropdown-item" id="logout">Log Out</a>
+         
+        </div>
+      </li>
+    </ul>
+  </div>  
+</nav>
+
+<!--//body-section -->
+<div class="container">
+    <div class="row">
+        <div class="col-xl-4">
+
+          <div class="card">
+            <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+
+              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <h2>Kevin Anderson</h2>
+              <h3>Web Designer</h3>
+              <div class="social-links mt-2">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-xl-8">
+
+          <div class="card">
+            <div class="card-body pt-3">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'overview')">Profile Overview</button>
+                    <button class="tablinks" onclick="openTab(event, 'edit')">Edit Profile</button>
+                    <button class="tablinks" onclick="openTab(event, 'settings')">Settings</button>
+                    <button class="tablinks" onclick="openTab(event, 'changepassword')">Change Password</button>
+                  </div>
+                  
+                  <div id="overview" class="tabcontent">
+                    <!-- Content for Profile Overview tab -->
+                    <h5 class="card-title">About</h5>
+                    <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+  
+                    <h5 class="card-title">Profile Details</h5>
+  
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label ">Full Name</div>
+                      <div class="col-lg-9 col-md-8">Kevin Anderson</div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Company</div>
+                      <div class="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Job</div>
+                      <div class="col-lg-9 col-md-8">Web Designer</div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Country</div>
+                      <div class="col-lg-9 col-md-8">USA</div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Address</div>
+                      <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Phone</div>
+                      <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Email</div>
+                      <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
+                    </div>
+                  </div>
+                  
+                  <div id="edit" class="tabcontent">
+                    <!-- Content for Edit Profile tab -->
+                    <form>
+                        <div class="row mb-3">
+                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                        <div class="col-md-8 col-lg-9">
+                            <img src="assets/img/profile-img.jpg" alt="Profile">
+                            <div class="pt-2">
+                            <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
+                            <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
+                        <div class="col-md-8 col-lg-9">
+                            <textarea name="about" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="company" type="text" class="form-control" id="company" value="Lueilwitz, Wisoky and Leuschke">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="country" type="text" class="form-control" id="Country" value="USA">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="twitter" type="text" class="form-control" id="Twitter" value="https://twitter.com/#">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="facebook" type="text" class="form-control" id="Facebook" value="https://facebook.com/#">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="instagram" type="text" class="form-control" id="Instagram" value="https://instagram.com/#">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="linkedin" type="text" class="form-control" id="Linkedin" value="https://linkedin.com/#">
+                        </div>
+                        </div>
+
+                        <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+                    <!-- End Profile Edit Form -->
+                  </div>
+                  
+                  <div id="settings" class="tabcontent">
+                        <!-- Settings Form -->
+                    <form>
+
+                        <div class="row mb-3">
+                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Email Notifications</label>
+                        <div class="col-md-8 col-lg-9">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="changesMade" checked>
+                            <label class="form-check-label" for="changesMade">
+                                Changes made to your account
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="newProducts" checked>
+                            <label class="form-check-label" for="newProducts">
+                                Information on new products and services
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="proOffers">
+                            <label class="form-check-label" for="proOffers">
+                                Marketing and promo offers
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="securityNotify" checked disabled>
+                            <label class="form-check-label" for="securityNotify">
+                                Security alerts
+                            </label>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form><!-- End settings Form -->
+                  </div>
+
+                  <div id="changepassword" class="tabcontent">
+                        <!-- Change Password Form -->
+                    <form>
+
+                        <div class="row mb-3">
+                        <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="password" type="password" class="form-control" id="currentPassword">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="newpassword" type="password" class="form-control" id="newPassword">
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
+                        <div class="col-md-8 col-lg-9">
+                            <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+                        </div>
+                        </div>
+
+                        <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Change Password</button>
+                        </div>
+                    </form><!-- End Change Password Form -->
+                  </div>
+
+            </div>
+          </div>
+
+        </div>
+    </div>
+</div>
+  
+
+<footer class="page-footer font-small bg-dark pt-4 mt-5">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left text-light">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-5 mt-md-0 mt-3">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase">Tubaayo Community Fund</h5>
+          <p><i class="fa-solid fa-location-dot"></i> Ntinda Complex, Ntinda Kampala Innovation Village, Block D, Ground Floor</p>
+          <p><i class="fa-solid fa-envelope"></i> comumnityfund@tubaayo.com</p>
+          <p><i class="fa-solid fa-phone"></i> +256-7768238181 or +256-740540330</p>
+  
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none pb-3 text-center">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">Fund</h5>
+  
+          <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="link text-light">Invest/Save</a>
+              </li>
+              <li>
+                <a href="learn.html"  class="text-light">Learn</a>
+              </li>
+              <li>
+                <a href="aboutus.html" class="text-light">About Us</a>
+              </li>
+              <li>
+                <a href="contact.html" class="text-light">Contact Us</a>
+              </li>
+              <li>
+                <a href="signup.html" class="text-light">Sign Up</a>
+              </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-md-0 mb-3 text-center" >
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">Site Map</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="products.html">Solution</a>
+            </li>
+            <li>
+              <a href="solutions.html">Products</a>
+            </li>
+            <li>
+              <a href="#!">Company</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3 text-center">
+          <h5 class="text text-light"> Follow Us</h5>
+          <a href="#" class="link text-light"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="link text-light"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="link text-light"><i class="fa-brands fa-facebook"></i></a>
+  
+  
+        </div>
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-light text-center py-3 bg-dark">©2023 Copyright |
+      <a href="index.html" class="">Tubaayo</a>
+    </div>
+    <!-- Copyright -->
+  
+</footer>
+
+    <script type="module" src="/firebase backend/auth.js"></script>
+
+    <script>
+        function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+
+        // Hide all tab content
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove "active" class from all tab buttons
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the selected tab content and mark the button as active
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+        }
+    </script>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+</body>
+</html>
+  

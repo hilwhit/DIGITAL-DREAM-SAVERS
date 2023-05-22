@@ -119,7 +119,10 @@ onAuthStateChanged(auth, async (user) => {
     // User is signed in
     const uid = user.uid;
     const allowedUrls = [
-        '/dashboard.html'
+        '/dashboard.html',
+        '/investments.html',
+        '/profile.html',
+
     ];
     const currentUrl = window.location.pathname;
 
