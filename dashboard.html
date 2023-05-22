@@ -14,98 +14,102 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
- 
+ <link rel="stylesheet" href="/css/stylesheet.css">
+
+ <style>
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #f1f1f1;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background-color: #4CAF50;
+      width: 0;
+      transition: width 0.3s;
+    }
+ </style>
 
 </head>
 <body>
 <!-- <div class="jumbotron jumbotron-fluid "> -->
-    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-center fixed-top pb-2">
-        <a class="navbar-brand" href="index.html">
-            <img src="/images/logo.png" alt="Logo" style="width:50px;">
-          </a>
-      <a class="navbar-brand" href="index.html">Tubaayo Community Fund</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="learn.html">Learn</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="aboutus.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-          </li>   
-          <li class="nav-item ">
-            <a class="nav-link active" href="login.html">Login</a>
-          </li>
-        </ul>
-      </div>  
-    </nav>
-<div class="container">
-    <div class="clearfix"></div>
-    <div class="row">
-        <div class="col-md-5 text-center mt-5 pt-5 offset-md-3 bg-default" >
-            
-            
-            <div class="card">
-                <h5 class="text-center text-dark mt-2 pt-2">Already have an Account!</h5>
-                <div class="card-body">
-                    <!-- <form class="" action="#"> -->
-                        <div class="form-group row">
-                         
-                            <div class="col-md-12 mt-2 mb-2 p-2"> 
-                                <input class="form-control"name="email" placeholder="Email" id="email" type="email">
-                            </div>
-                            <div class="col-md-12 mt-2 mb-2 p-2">
-                                <input  class="form-control"name="password" placeholder="Password" id="password" type="password">
-                            </div>
-                            
-                    </div>
-                    <button type="submit" class="btn btn-sm btn-dark" id="login">Login</button>
-                    
-                        
-                    <!-- </form> -->
-                    <p class="c text-secondary">Don't have an account with us yet!</p>
-                    <a href="signup.html" class="link text-secondary">Create an account</a>
-                </div>
-            </div>
-            
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-center pb-2 mb-5">
+    <a class="navbar-brand" href="index.html">
+        <img src="/images/logo.png" alt="Logo" style="width:50px;">
+      </a>
+  <a class="navbar-brand" href="index.html">Tubaayo Community Fund</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto"> 
+      <li class="nav-item">
+        <a class="nav-link active" href="dashboard.html">Savings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="investments.html">Investments</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Hello Hildah
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="profile.html">Profile</a>
+          <a class="dropdown-item" id="logout">Log Out</a>
+         
         </div>
+      </li>
+    </ul>
+  </div>  
+</nav>
 
-        <div class="col-md-12 mt-3 pt-2 text-justify">
-            <h3 class="text-center text-dark">Here for YOU!</h3>
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <img src="./images/logo.png" class="float-left" style="width:50px" alt=""/>
-                    <p class="mt-2 pt-2 mb-2 pb-2 text-justify">Access the professional gidance from our advisore</p>
-                    <img src="./images/logo.png" class="float-left" style="width:50px" alt=""/>
-                    <p class="mt-2 pt-2 mb-2 pb-2 text-justify">Withdraw any amount neede and te rest stays invested</p>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <img src="./images/logo.png" class="float-left" style="width:50px" alt=""/>
-                    <p class="mt-2 pt-2 mb-2 pb-2 text-justify">Deposit regulary using MTN/Airtel mobile money or Bank Transfer</p>
-                    <img src="./images/logo.png" class="float-left" style="width:50px" alt=""/>
-                    <p class="mt-2 pt-2 mb-2 pb-2 text-justify">Track performance and progress via our website, app or USSD</p>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-</div>
 <!--//body-section -->
 
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mb-3">
+        <h1>Savings</h1>
+    </div>
+    <div class="col-md-6 text-center">
+      <div class="pack-container">
+        <div class="header">
+          <p class="title">
+            <h4>Your Current Savings</h4> 
+          </p>
+          <div class="price-container">
+            <h6> UGX 5000</h6>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-md-6 text-center">
+      <div class="pack-container">
+        <div class="header">
+          <p class="title">
+            <h4>Your Target Savings</h4>
+          </p>
+          <div>
+            <h6>UGX 500000</h6>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-md-12 text-center mt-3">
+      <h3>Track Savings</h3>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+  </div>
+</div>
   
 
-<footer class="page-footer font-small bg-dark pt-4">
+<footer class="page-footer font-small bg-dark pt-4 mt-5">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left text-light">
@@ -201,6 +205,22 @@
   
   </footer>
   <script type="module" src="/firebase backend/auth.js"></script>
+
+  <script>
+    // Add these global variables
+    var currentAmount = 5000; // Example: Current saved amount
+    var targetAmount = 500000; // Example: Target savings goal
+
+    // Call this function to update the progress bar
+    function updateProgressBar() {
+      var progress = (currentAmount / targetAmount) * 100;
+      document.querySelector('.progress').style.width = progress + '%';
+    }
+
+    // Call the function initially
+    updateProgressBar();
+  </script>
+
   </body>
   </html>
   
