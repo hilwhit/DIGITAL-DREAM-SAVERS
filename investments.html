@@ -28,18 +28,18 @@
         align-items: flex-end;
         height: 200px;
         background-color: #f1f1f1;
-        border-radius: 8px;
+        border-radius: 5px;
         overflow: hidden;
         }
 
         .bar {
         flex: 1;
-        margin: 0 5px;
+        margin: 0 3px;
         transition: height 0.3s ease-in-out;
         }
 
         .invested {
-        background-color: #6122ff;
+        background-color: #3a383d;
         }
 
         .revenue {
@@ -52,7 +52,7 @@
 
         .graph-labels span {
         display: inline-block;
-        margin: 0 20px;
+        margin: 0 10px;
         font-weight: bold;
         color: #777;
         }
@@ -72,10 +72,11 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto"> 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarSavingsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="dashboard.html" id="navbarSavingsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Savings
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarSavingsDropdown">
+          <a class="dropdown-item" href="dashboard.html">My Account</a>
           <a class="dropdown-item" href="deposit.html">Deposit</a>
           <a class="dropdown-item" href="withdraw.html">Withdraw</a>
         </div>
@@ -85,6 +86,7 @@
           Investments
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarInvestmentsDropdown">
+          <a class="dropdown-item" href="investments.html">Investments</a>
           <a class="dropdown-item" href="moneymarkets.html">Money Markets</a>
           <a class="dropdown-item" href="fixedincome.html">Fixed Income</a>
           <a class="dropdown-item" href="domesticequities.html">Domestic Equities</a>
